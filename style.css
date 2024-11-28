@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+@font-face {
+    font-family: my_font;
+    src: url(Assets/SourGummy-Regular.ttf);
+}
+
+@font-face {
+    font-family: my_font_2;
+    src: url(Assets/PlaypenSans-Medium.ttf);
+}
+section{
+    background-color: transparent;
+}
+.header1 {
+    display: flex;
+    font-size: 250%;
+    font-family: my_font;
+    place-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header1 img {
+    image-rendering: pixelated;
+    position: relative;
+}
+
+.headerbar {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    position: relative;
+    image-rendering: pixelated;
+}
+
+.headerbar1 {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    image-rendering: pixelated;
+    position: relative;
+}
+
+.p1 {
+    font-family: my_font_2;
+    position: relative;
+    font-size: 230%;
+}
+
+.p2 {
+    font-family: my_font_2;
+    position: relative;
+    font-size: 230%;
+}
+
+.p3{
+    font-family: my_font_2;
+    position: relative;
+    font-size: 230%;
+}
+.p4{
+    font-family: my_font_2;
+    position: relative;
+    font-size: 230%;
+}
+.p5{
+    font-family: my_font_2;
+    position: relative;
+    font-size: 230%;
+}
+.p6{
+    font-family: my_font_2;
+    position: relative;
+    font-size: 230%;
+}
+.p7{
+    display: flex;
+    font-size: 500%;
+    font-family: my_font;
+    place-content: center;
+    align-items: center;
+    position: relative;
+}
+.mewmew {
+    display: flex;
+    place-content: center;
+    image-rendering: pixelated;
+    position: relative;
+    gap: 10px;
+}
+.bar{
+    font-family: my_font;
+    font-size: 250%;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    position: relative;
+    image-rendering: pixelated;
+}
+.cat1{
+    display: flex;
+    place-content: center;
+    image-rendering: pixelated;
+    position: relative;
+    gap: 10px;
+}
+
+.cat2{
+    display: flex;
+    place-content: center;
+    image-rendering: pixelated;
+    position: relative;
+    gap: 10px;
+}
+.cat3{
+    display: flex;
+    place-content: center;
+    image-rendering: pixelated;
+    position: relative;
+    gap: 10px;
+}
+.cat4{
+    display: flex;
+    place-content: center;
+    image-rendering: pixelated;
+    position: relative;
+    gap: 10px;
+}
+.cat5{
+    display: flex;
+    place-content: center;
+    image-rendering: pixelated;
+    position: relative;
+    gap: 10px;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(3px);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+.playvid{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    position: relative;
+    padding: 20px 55px;
+    background-color: rgb(255, 130, 168);
+    border-radius: 6px;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    box-shadow: 0 5px 10px rgba(255, 149, 239, 0.1);
+}
+.button:active{
+    transform: scale(0.96);
+}
+.button::before,
+.button::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    background-repeat: no-repeat;
+}
+.button.animate::before {
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 20% 20%, 30% 30%, 15% 15%, 10% 10%, 18% 18%, 15% 15%, 10% 10%;
+    background-position: 25% 90%, 20% 90%, 12% 90%, 15% 90%, 25% 90%, 25% 90%;
+    animation: topBubbles 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes topBubbles {
+    0% {
+        background-position: 25% 90%, 20% 90%, 12% 90%, 15% 90%, 25% 90%, 25% 90%;
+    }
+    50% {
+        background-position: 15% 70%, 10% 50%, 5% 30%, 20% 20%, 30% 10%, 50% 0%;
+    }
+    100% {
+        background-position: 0% 100%, 0% 80%, 0% 60%, 0% 40%, 0% 20%, 0% 0%;
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+}
+
+.button.animate::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 10% 10%;
+    background-position: 10% 0%, 0% 10%, 5% 0%, 0% 0%, 5% 0%, 75% 0%;
+    animation: bottomBubbles 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% 0%, 0% 10%, 5% 0%, 0% 0%, 5% 0%, 75% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 60%, 45% 50%, 60% 40%, 75% 30%, 95% 20%;
+    }
+    100% {
+        background-position: 0% 90%, 20% 70%, 45% 60%, 60% 50%, 75% 40%, 95% 30%;
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+}
+
+.hiden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+.video-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    image-rendering: pixelated;
+    background-color: rgba(0, 0, 0, 0.95);
+    visibility: hidden;
+    opacity: 0;
+}
+.video-container video{
+    position: relative;
+    max-width: 720px;
+    outline: none;
+}
+@media (max-width: 991px){
+    .video-container video{
+        max-width: 90%;
+    }
+}
+.Close{
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.video-container.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.ngoac1{
+    width: 90px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.ngoac2{
+    width: 90px;
+    height: auto;
+    image-rendering: pixelated;
+}
+.blank{
+    min-height: 100vh;
+}
